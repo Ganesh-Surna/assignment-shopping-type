@@ -112,7 +112,7 @@
     background-color: transparent;
     border: 1px solid rgb(221, 36, 159);
     color: rgb(221, 36, 159);
-    font-weight: 800;
+    font-size: 1rem;
 }
 .back:hover{
     cursor: pointer;

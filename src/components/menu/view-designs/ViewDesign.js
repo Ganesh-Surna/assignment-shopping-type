@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classes from "./ViewDesign.module.css";
+import { useRouteLoaderData } from "react-router-dom";
 
 const DUMMY_LIST = [
   {
@@ -112,6 +113,7 @@ const DUMMY_LIST = [
 //   },
 ];
 export default function ViewDesign() {
+    const token = useRouteLoaderData("root");
     const [isShow, setIsShow]= useState(false);
 
     const [cardItem, setCardItem]=useState(null);

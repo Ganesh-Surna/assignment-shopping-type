@@ -8,10 +8,16 @@ import Customers from "./components/menu/customers/Customers";
 import Home from "./components/Home";
 import MenuLayout from "./components/menu/MenuLayout";
 import "./styles.css";
+import AuthForm from "./components/Register/AuthForm";
+
+import { action as logoutAction } from "./components/Register/Logout";
+import { authTokenLoader } from "./util/auth";
 
 const router= createBrowserRouter([
   {
     path: "/", element:<RootLayout/>,
+    id: "root",
+    loader: authTokenLoader,
     children: [
       {
         index: true, element:<Home/>,
@@ -35,6 +41,12 @@ const router= createBrowserRouter([
             path: "/menu/customers", element: <Customers/>,
           },
         ]
+      },
+      {
+        path:"/auth", element:<AuthForm/>,
+      },
+      {
+        path:"/logout", action: logoutAction,
       }
     ]
   }

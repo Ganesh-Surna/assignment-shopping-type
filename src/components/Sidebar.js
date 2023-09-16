@@ -1,8 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { Form, Link, NavLink, useRouteLoaderData } from "react-router-dom";
 
 import classes from "./Sidebar.module.css";
 
 export default function Sidebar() {
+  const token= useRouteLoaderData("root");
+
     return (
       <div className={classes.sidebar}>
         <section className={classes["fields"]}>
@@ -21,8 +23,10 @@ export default function Sidebar() {
           <NavLink to="/menu/customers" className={({isActive})=>isActive? classes.active : ""}>
             <span>Customers</span>
           </NavLink>
-          <Link to="/">Logout</Link>
         </section>
+        {token && <Form method="post" action="/logout" className={classes.action}>
+            <button className={classes.logout}>Logout</button>
+        </Form>}
       </div>
     );
   }

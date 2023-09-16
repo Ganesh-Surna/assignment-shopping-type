@@ -1,5 +1,8 @@
-import Field from "../UI/field-container";
+import classes from "./Home.module.css";
 
 export default function Home(){
-    return <h1>Home</h1>
+    return <div className={classes.home}>
+        <h1>Welcome To React Shopping</h1>
+        <p>Explore Amazing Designs!</p>
+    </div>
 }
