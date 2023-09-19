@@ -82,3 +82,15 @@
     margin-top: 0.25rem;
     font-size: 0.75rem;
   }
+
+  @media screen and (max-width:767px) {
+    .form{
+        width:80%;
+    }
+    .form-actions{
+        flex-direction: column-reverse;
+    }
+    h1{
+        font-size: 2rem;
+    }
+  }

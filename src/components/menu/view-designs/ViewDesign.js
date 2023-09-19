@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classes from "./ViewDesign.module.css";
 import { useRouteLoaderData } from "react-router-dom";
+import LikeIcon from "../../../icons/like-icon";
 
 const DUMMY_LIST = [
   {

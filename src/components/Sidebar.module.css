@@ -56,3 +56,9 @@
     background-color: #329bf1;
     color: white;
 }
+
+@media screen and (max-width:767px) {
+    .sidebar{
+        width: 40%;
+    }
+}

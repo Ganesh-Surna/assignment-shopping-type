@@ -25,6 +25,7 @@
     flex: 1;
     max-width: 32%;
 }
+
 .card:hover{
     cursor: pointer;
 }
@@ -61,7 +62,7 @@
 .actions button{
     background-color: rgb(243, 113, 237);
     color: white;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 2rem;
     border-radius: 0.35rem;
     border:none;
 }
@@ -80,6 +81,7 @@
 }
 .details-container h1{
     color: rgb(226, 101, 43);
+    text-align: center;
 }
 
 .card-details{
@@ -87,7 +89,6 @@
     width:80%;
     background-color: rgb(234, 243, 250);
     height: 60vh;
-    gap:2rem;
 }
 
 .card-details img{
@@ -103,7 +104,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex:2;
+    padding: 0 0.5rem;
 }
 
 .back{
@@ -118,4 +121,43 @@
     cursor: pointer;
     background-color: rgb(221, 36, 159);
     color: white;
+}
+
+@media screen and (max-width:767px) {
+    .card{
+        min-width: 90%;
+    }
+    .card img{
+        height: 8rem;
+    }
+    .card-details{
+        flex-direction: column;
+        height: auto;
+        gap:1rem;
+    }
+    .card-details img{
+        /* height: 55vh; */
+        width:100%;
+    }
+    .content{
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (min-height:1000px){
+    .card-details{
+        height: 30vh;
+    }
+    .card-details img{
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width:767px) and (min-height:1000px) {
+    .card-details{
+        height: auto;
+    }
+    .card-details img{
+        width:100%;
+    }
 }

@@ -6,3 +6,9 @@ body{
   font-family: sans-serif;
   color: black;
 }
+
+@media screen and (max-width:819px) {
+  h1{
+    font-size: 1.35rem;
+  }
+}
