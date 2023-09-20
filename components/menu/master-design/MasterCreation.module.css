@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+}
+.header{
+    background-color: rgb(25, 139, 101);
+    color:white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    padding: 0 2%;
+}
+.header p{
+    margin: 0;
+    padding: 0;
+}
+.below{
+    margin-top: 5vh;
+    padding: 0.5rem;
+    display: flex;
+    gap:1rem;
+    overflow-y: auto;
+    width: 100%;
+}
+.below .image{
+    width:43%;
+    /* height: 100vh; */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+.below .image img{
+    border-radius: 0.35rem;
+    object-fit: cover;
+    width: 100%;
+    /* height: 98vh; */
+    align-self: stretch;
+}
+fieldset{
+    border: 1px solid rgb(25, 139, 101);
+    border-radius: 0.35rem;
+    width: 55%;
+}
+legend{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgb(25, 139, 101);
+}
+.form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:0.45rem;
+    margin-bottom: 1rem;
+}
+.form .date{
+    align-self: flex-end;
+    color: rgb(25, 139, 101);
+    border: 1px solid rgb(25, 139, 101);
+    padding: 0.25rem;
+    width: 25%;
+    border-radius: 0.15rem;
+    outline: none;
+}
+
+.fields{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+.group{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    min-width: 20%;
+    max-width: 32%;
+    flex: 1;
+}
+.group label{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(25, 139, 101);
+}
+.group select{
+    padding: 0.35rem;
+    width: 100%;
+    border: 1px solid rgb(25, 139, 101);
+    outline: none;
+    font-weight: 600;
+    border-radius: 0.2rem;
+}
+.num-group{
+    display: flex;
+    flex-direction: column;
+    gap:0.35rem;
+    min-width: 10%;
+    max-width: 20%;
+    flex: 1;
+}
+.num-group label{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(25, 139, 101);
+}
+.num-group input{
+    padding: 0.35rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    font-weight: 600;
+    border-radius: 0.2rem;
+}
+.remarks{
+    display: flex;
+    gap:2rem;
+    align-items: center;
+    width:100%;
+}
+.remarks label{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(25, 139, 101);
+}
+.remarks input{
+    padding: 0.35rem;
+    flex: 1;
+    border: 1px solid rgb(74, 189, 151);
+    outline: none;
+    font-weight: 600;
+    border-radius: 0.2rem;
+}
+.fields button{
+    align-self: flex-end;
+    color:white;
+    background-color: rgb(25, 139, 101);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+.fields button:hover{
+    cursor: pointer;
+}
+#hello{
+    background-color: rgb(57, 158, 87);
+}
+
+.actions{
+    margin-top: 2rem;
+    display: flex;
+    gap:1rem;
+}
+.actions button{
+    color:white;
+    background-color: rgb(25, 139, 101);
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.actions button:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+    .below{
+        flex-direction: column;
+    }
+    .below .image{
+        order: 0;
+        width: 100%;
+    }
+    fieldset{
+        order: 1;
+        width:100%;
+    }
+    /* .fields{
+        flex-direction: column;
+    } */
+    .num-group{
+        min-width: 30%;
+    }
+    .remarks{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:0.5rem;
+        width:100%;
+    }
+    .remarks input{
+        width:100%;
+    }
+    /* .fields button{
+        align-self: flex-start;
+    } */
+    .actions{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .actions button{
+        margin-right: 1rem !important;
+    }
+    
+}
