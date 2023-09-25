@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
-import classes from "./CreationTable.module.css";
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
@@ -10,12 +9,15 @@ const CreationTable = ({rowDataArr}) => {
 
 //   const gridRef = useRef(); // Optional - for accessing Grid's API
 
-  //const [rowData, setRowData] = useState();  Set rowData to Array of Objects, one Object per Row
-  const [rowData, setRowData]= useState([
-    {"Sno": 1, type:"Type 1", stoneGroup:" Stone Group 1" , pcs: 1, stoneWt: 1, "UOM":"Grms" },
-    {"Sno": 2, type:"Type 2", stoneGroup:" Stone Group 2" , pcs: 2, stoneWt: 2, "UOM":"Cts" },
-    {"Sno": 3, type:"Type 3", stoneGroup:" Stone Group 3" , pcs: 3, stoneWt: 3, "UOM":"Cts" },
-  ]);
+  const [rowData, setRowData] = useState([]);  //Set rowData to Array of Objects, one Object per Row
+  // const [rowData, setRowData]= useState([
+  //   {"Sno": 1, type:"Type 1", stoneGroup:" Stone Group 1" , pcs: 1, stoneWt: 1, "UOM":"Grms" },
+  //   {"Sno": 2, type:"Type 2", stoneGroup:" Stone Group 2" , pcs: 2, stoneWt: 2, "UOM":"Cts" },
+  //   {"Sno": 3, type:"Type 3", stoneGroup:" Stone Group 3" , pcs: 3, stoneWt: 3, "UOM":"Cts" },
+  // ]);
+  useEffect(()=>{
+    setRowData(rowDataArr);
+  },[rowDataArr]);
 
   // Each Column Definition results in one Column.
   const [columnDefs, setColumnDefs] = useState([

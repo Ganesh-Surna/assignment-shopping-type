@@ -1,5 +1,6 @@
 import { NavLink, Form, useRouteLoaderData, useSubmit } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
+import Logo from "../assets/logo.svg";
 import { useState } from "react";
 
 export default function MainNavigation(){
@@ -23,7 +24,10 @@ export default function MainNavigation(){
     }
 
     return <header className={classes.header} style={token && {paddingRight:"1rem"}}>
-        <h1>React Shopping</h1>
+        <div className={classes["logo-container"]}>
+            <img src={Logo}/>
+            <h1>React Shopping</h1>
+        </div>
         <nav>
             <div className={classes.bars} onClick={toggleNavbar}>
                 {!isOpen && <svg 

@@ -33,9 +33,6 @@ const router= createBrowserRouter([
             path: "/menu/master-design", element: <MasterDesign/>,
           },
           {
-            path: "/menu/view-designs", element: <ViewDesign/>,
-          },
-          {
             path: "/menu/order-form", element: <OrderForm/>,
           },
           {
@@ -49,10 +46,13 @@ const router= createBrowserRouter([
       {
         path:"/logout", action: logoutAction,
       },
+      {
+        path:"/creation",  element:<MasterCreation/>,
+      },
+      {
+        path: "/menu/view-designs", element: <ViewDesign/>,
+      },
     ]
-  },
-  {
-    path:"/creation",  element:<MasterCreation/>,
   },
 ])
 

@@ -1,6 +1,52 @@
+.whole-designs-page{
+    display: flex;
+    gap:5rem;
+}
+.whole-filter{
+    width:15%;
+    margin-left: 3rem;
+}
+.filter{
+    width: 100%;
+    margin-top: 1rem;
+    border-right: 1px solid #ccc;
+}
+
+.filter-field{
+    border-top:  1px solid #ccc;
+    display: flex;
+    gap:3rem;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-field .title{
+    font-weight: bold;
+}
+.filter-field .symbol{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#56585c;
+}
+.filter-field .symbol:hover{
+    cursor: pointer;
+}
+.checkbox-grp{
+    display: flex;
+    align-items: center;
+    gap:0.75rem;
+}
+.checkbox-grp input:hover, .checkbox-grp label:hover{
+    cursor: pointer;
+}
+
+
+
+
 .designs{
     text-align: center;
-    width:100%;
+    width:80%;
     padding: 0 1rem;
 }
 .designs h1{
@@ -38,7 +84,7 @@
     border-top-left-radius: 0.35rem;
 }
 
-.title{
+.card .title{
     font-size: 1rem;
     font-weight: 600;
     color: rgb(163, 4, 137);
@@ -89,17 +135,20 @@
     width:80%;
     background-color: rgb(234, 243, 250);
     height: 60vh;
+    align-items: stretch;
 }
 
 .carousel{
     width:50%;
     height: 60vh;
+    /* height: 100%; */
 }
 
 .carousel-img{
     object-fit: cover;
     width:100%;
     height: 60vh;
+    /* height: 100%; */
 }
 
 .content{
